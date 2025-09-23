@@ -79,6 +79,16 @@
             /* each slide is 100% of container */
             object-fit: cover;
         }
+
+        .pop-out {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .pop-out:hover,
+        .pop-out:active {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
     </style>
 
 
@@ -94,16 +104,26 @@
 
             <!-- Logo + Deliver -->
             <div class="flex items-center space-x-3">
-                <img src="Images/removed bg logo.png" alt="Logo" class="h-12 w-auto object-contain">
-                <div class="flex items-center space-x-1 text-sm">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24" width="20" height="20">
-                        <path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 
-               9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 
-               2.5 2.5S13.38 11.5 12 11.5z" />
-                    </svg>
-                    <a href="#" class="underline">Deliver to</a>
-                    <span>&#9660;</span>
+                <img src="Images/removed bg logo.png" alt="Logo" class="h-12 w-auto object-contain pop-out">
+                <!-- delivery dropdown -->
+                <div class="relative group z-50">
+                    <button
+                        class="flex items-center space-x-1 px-3 py-2 rounded-lg border border-gray-300 bg-gray-50 hover:bg-blue-100 transition-all duration-200 ">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24" width="20" height="20">
+                            <path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 
+             9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 
+             2.5 2.5S13.38 11.5 12 11.5z" />
+                        </svg>
+                        <span class="font-medium">Deliver to</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+
+
                 </div>
+
             </div>
 
             <!-- Cart + Profile -->
@@ -155,13 +175,13 @@
     <div class="overflow-hidden relative md:mx-10 ">
         <div class=" slideshow w-full  rounded-lg">
             <img src="Images/slideShow pic 1.jpg" alt="Banner 1"
-                class="rounded-lg transition-transform duration-300 hover:scale-x-[1.02] hover:scale-y-[1.02]">
+                class="rounded-lg transition-transform duration-300  pop-out">
             <img src="Images/slide show pic 2.png" alt="Banner 2"
-                class="rounded-lg transition-transform duration-300 hover:scale-x-[1.02] hover:scale-y-[1.02]">
+                class="rounded-lg transition-transform duration-300 pop-out">
             <img src="Images/slide show img 3.jpg" alt="Banner 3"
-                class="rounded-lg transition-transform duration-300 hover:scale-x-[1.02] hover:scale-y-[1.02]">
+                class="rounded-lg transition-transform duration-300 pop-out">
             <img src="Images/side show img 4.jpg" alt="Banner 4"
-                class="rounded-lg transition-transform duration-300 hover:scale-x-[1.02] hover:scale-y-[1.02]">
+                class="rounded-lg transition-transform duration-300 pop-out">
         </div>
     </div>
 
@@ -180,49 +200,49 @@
         <div class="rounded-lg mx-2 md:mx-10 bg-white flex overflow-x-auto scroll-smooth p-5 md:p-10 gap-2 
      [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
 
-            <div class="group flex-none cursor-pointer w-40 md:w-52">
+            <div class="group flex-none cursor-pointer w-40 md:w-52 ">
                 <img src="Images/Ultra Fresh.jpg" alt="Ultra Fresh"
-                    class="rounded-lg border border-white border-[3px] group-hover:border-blue-400">
+                    class="rounded-lg border border-white border-[3px] group-hover:border-blue-400 pop-out">
                 <p class="text-center mt-2 font-medium">Ultra Fresh</p>
             </div>
-            <div class="group flex-none cursor-pointer w-40 md:w-52">
+            <div class="group flex-none cursor-pointer w-40 md:w-52 ">
                 <img src="Images/Grocery.jpg" alt="Grocery"
-                    class="rounded-lg border border-white border-[3px] group-hover:border-blue-400">
+                    class="rounded-lg border border-white border-[3px] group-hover:border-blue-400 pop-out">
                 <p class="text-center mt-2 font-medium">Grocery</p>
             </div>
-            <div class="group flex-none cursor-pointer w-40 md:w-52">
+            <div class="group flex-none cursor-pointer w-40 md:w-52 ">
                 <img src="Images/breakfast.jpg" alt="Breakfast"
-                    class="rounded-lg border border-white border-[3px] group-hover:border-blue-400">
+                    class="rounded-lg border border-white border-[3px] group-hover:border-blue-400 pop-out">
                 <p class="text-center mt-2 font-medium">Breakfast & Dairy</p>
             </div>
             <div class="group flex-none cursor-pointer w-40 md:w-52">
                 <img src="Images/frozen food.jpg" alt="Frozen"
-                    class="rounded-lg border border-white border-[3px] group-hover:border-blue-400">
+                    class="rounded-lg border border-white border-[3px] group-hover:border-blue-400 pop-out">
                 <p class="text-center mt-2 font-medium">Frozen Food</p>
             </div>
-            <div class="group flex-none cursor-pointer w-40 md:w-52">
+            <div class="group flex-none cursor-pointer w-40 md:w-52 ">
                 <img src="Images/baby products.jpg" alt="Baby"
-                    class="rounded-lg border border-white border-[3px] group-hover:border-blue-400">
+                    class="rounded-lg border border-white border-[3px] group-hover:border-blue-400 pop-out">
                 <p class="text-center mt-2 font-medium">Baby Products</p>
             </div>
-            <div class="group flex-none cursor-pointer w-40 md:w-52">
+            <div class="group flex-none cursor-pointer w-40 md:w-52 ">
                 <img src="Images/health and beauty.jpg" alt="Beauty"
-                    class="rounded-lg border border-white border-[3px] group-hover:border-blue-400">
+                    class="rounded-lg border border-white border-[3px] group-hover:border-blue-400 pop-out">
                 <p class="text-center mt-2 font-medium">Health & Beauty</p>
             </div>
-            <div class="group flex-none cursor-pointer w-40 md:w-52">
+            <div class="group flex-none cursor-pointer w-40 md:w-52 ">
                 <img src="Images/household.jpg" alt="Household"
-                    class="rounded-lg border border-white border-[3px] group-hover:border-blue-400">
+                    class="rounded-lg border border-white border-[3px] group-hover:border-blue-400 pop-out">
                 <p class="text-center mt-2 font-medium">Household</p>
             </div>
-            <div class="group flex-none cursor-pointer w-40 md:w-52">
+            <div class="group flex-none cursor-pointer w-40 md:w-52 ">
                 <img src="Images/beverages.jpg" alt="Beverages"
-                    class="rounded-lg border border-white border-[3px] group-hover:border-blue-400">
+                    class="rounded-lg border border-white border-[3px] group-hover:border-blue-400 pop-out">
                 <p class="text-center mt-2 font-medium">Beverages</p>
             </div>
-            <div class="group flex-none cursor-pointer w-40 md:w-52">
+            <div class="group flex-none cursor-pointer w-40 md:w-52 ">
                 <img src="Images/sweets.jpg" alt="Sweets"
-                    class="rounded-lg border border-white border-[3px] group-hover:border-blue-400">
+                    class="rounded-lg border border-white border-[3px] group-hover:border-blue-400 pop-out">
                 <p class="text-center mt-2 font-medium">Sweets & Chocolates</p>
             </div>
         </div>
@@ -237,7 +257,7 @@
         <!-- Ultra Fresh Banner -->
         <div class="mx-2 md:mx-10 ">
             <a href="#"><img src="Images/Vegetables pic.png" alt="Vegetables"
-                    class="rounded-lg w-full transition-transform duration-300 hover:scale-x-[1.02] hover:scale-y-[1.02]"></a>
+                    class="rounded-lg w-full transition-transform duration-300 pop-out"></a>
         </div>
 
         <!-- Ultra Fresh Products -->
@@ -245,9 +265,9 @@
      [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
 
             <!-- Product Cards -->
-            <div class="group flex-none w-44 md:w-60">
+            <div class="group flex-none w-44 md:w-60 pop-out pop-out">
                 <div class="border border-white border-[3px] rounded-lg p-3 group-hover:border-blue-400">
-                    <img src="Images/tomatoes.png" alt="Tomato" class="w-full h-40 md:h-52 rounded-lg">
+                    <img src="Images/tomatoes.png" alt="Tomato" class="w-full h-40 md:h-52 rounded-lg ">
                     <p class="text-center mt-2 font-medium">Fresh Tomato</p>
                     <p class="my-2 text-gray-500 text-xs">Per Kg</p>
                     <div class="flex justify-between">
@@ -257,9 +277,9 @@
                 </div>
             </div>
 
-            <div class="group flex-none w-44 md:w-60">
+            <div class="group flex-none w-44 md:w-60 pop-out">
                 <div class="border border-white border-[3px] rounded-lg p-3 group-hover:border-blue-400">
-                    <img src="Images/potato.png" alt="Potato" class="w-full h-40 md:h-52 rounded-lg">
+                    <img src="Images/potato.png" alt="Potato" class="w-full h-40 md:h-52 rounded-lg ">
                     <p class="text-center mt-2 font-medium">Fresh Potato</p>
                     <p class="my-2 text-gray-500 text-xs">Per Kg</p>
                     <div class="flex justify-between">
@@ -269,9 +289,9 @@
                 </div>
             </div>
 
-            <div class="group flex-none w-44 md:w-60">
+            <div class="group flex-none w-44 md:w-60 pop-out">
                 <div class="border border-white border-[3px] rounded-lg p-3 group-hover:border-blue-400">
-                    <img src="Images/onion.jpeg" alt="Onion" class="w-full h-40 md:h-52 rounded-lg">
+                    <img src="Images/onion.jpeg" alt="Onion" class="w-full h-40 md:h-52 rounded-lg ">
                     <p class="text-center mt-2 font-medium">Fresh Onion</p>
                     <p class="my-2 text-gray-500 text-xs">Per Kg</p>
                     <div class="flex justify-between">
@@ -281,9 +301,9 @@
                 </div>
             </div>
 
-            <div class="group flex-none w-44 md:w-60">
+            <div class="group flex-none w-44 md:w-60 pop-out">
                 <div class="border border-white border-[3px] rounded-lg p-3 group-hover:border-blue-400">
-                    <img src="Images/egg-plant.png" alt="Eggplant" class="w-full h-40 md:h-52 rounded-lg">
+                    <img src="Images/egg-plant.png" alt="Eggplant" class="w-full h-40 md:h-52 rounded-lg ">
                     <p class="text-center mt-2 font-medium">Egg Plant</p>
                     <p class="my-2 text-gray-500 text-xs">Per Kg</p>
                     <div class="flex justify-between">
@@ -293,9 +313,9 @@
                 </div>
             </div>
 
-            <div class="group flex-none w-44 md:w-60">
+            <div class="group flex-none w-44 md:w-60 pop-out">
                 <div class="border border-white border-[3px] rounded-lg p-3 group-hover:border-blue-400">
-                    <img src="Images/banana.jpg" alt="Banana" class="w-full h-40 md:h-52 rounded-lg">
+                    <img src="Images/banana.jpg" alt="Banana" class="w-full h-40 md:h-52 rounded-lg ">
                     <p class="text-center mt-2 font-medium">Fresh Banana</p>
                     <p class="my-2 text-gray-500 text-xs">Dozen</p>
                     <div class="flex justify-between">
@@ -305,9 +325,9 @@
                 </div>
             </div>
 
-            <div class="group flex-none w-44 md:w-60">
+            <div class="group flex-none w-44 md:w-60 pop-out">
                 <div class="border border-white border-[3px] rounded-lg p-3 group-hover:border-blue-400">
-                    <img src="Images/apple.png" alt="Apple" class="w-full h-40 md:h-52 rounded-lg">
+                    <img src="Images/apple.png" alt="Apple" class="w-full h-40 md:h-52 rounded-lg ">
                     <p class="text-center mt-2 font-medium">Fresh Apple</p>
                     <p class="my-2 text-gray-500 text-xs">Per Kg</p>
                     <div class="flex justify-between">
@@ -317,9 +337,9 @@
                 </div>
             </div>
 
-            <div class="group flex-none w-44 md:w-60">
+            <div class="group flex-none w-44 md:w-60 pop-out">
                 <div class="border border-white border-[3px] rounded-lg p-3 group-hover:border-blue-400">
-                    <img src="Images/grapes.png" alt="Grapes" class="w-full h-40 md:h-52 rounded-lg">
+                    <img src="Images/grapes.png" alt="Grapes" class="w-full h-40 md:h-52 rounded-lg ">
                     <p class="text-center mt-2 font-medium">Fresh Grapes</p>
                     <p class="my-2 text-gray-500 text-xs">Per Kg</p>
                     <div class="flex justify-between">
@@ -337,7 +357,7 @@
     <!-- FOOTER -->
     <footer class="flex flex-col md:flex-row justify-between bg-blue-400 p-5 md:h-80">
         <div class="flex flex-col md:flex-row items-center md:items-start">
-            <img src="Images/removed bg logo.png" alt="Logo" class="w-28 md:w-44 my-5 md:my-10 mx-5 md:mx-10">
+            <img src="Images/removed bg logo.png" alt="Logo" class="w-28 md:w-44 my-5 md:my-10 mx-5 md:mx-10 pop-out">
             <div class="text-center md:text-left my-2 md:my-20">
                 <strong class="text-white">Contact:</strong>
                 <p class="text-white font-bold">WhatsApp: 0300-86899485</p>
