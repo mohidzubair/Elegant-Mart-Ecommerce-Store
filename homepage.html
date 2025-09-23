@@ -6,456 +6,342 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elegant Mart Ecommerce Website</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Slideshow animation */
+        @keyframes slide {
+            0% {
+                transform: translateX(0%);
+            }
+
+            20% {
+                transform: translateX(0%);
+            }
+
+            25% {
+                transform: translateX(-100%);
+            }
+
+            45% {
+                transform: translateX(-100%);
+            }
+
+            50% {
+                transform: translateX(-200%);
+            }
+
+            70% {
+                transform: translateX(-200%);
+            }
+
+            75% {
+                transform: translateX(-300%);
+            }
+
+            95% {
+                transform: translateX(-300%);
+            }
+
+            100% {
+                transform: translateX(0%);
+            }
+        }
+
+        /* .slideshow-container {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            height: 300px;
+            
+        } */
+
+        /* .slideshow {
+            display: flex;
+            width: max-content;
+            animation: slide 20s infinite;
+        } */
+
+        .slideshow {
+            display: flex;
+            width: 400%;
+
+            animation: slide 20s infinite;
+        }
+
+        /* .slideshow img {
+            width: 100%;
+            flex-shrink: 0;
+            object-fit: cover;
+        } */
+
+        .slideshow img {
+            flex-shrink: 0;
+            width: 100%;
+            /* each slide is 100% of container */
+            object-fit: cover;
+        }
+    </style>
+
+
 </head>
 
 <body class="bg-[#EEEEEE]">
 
-
-    <header class="flex bg-white h-24 justify-between  items-center">
-
-        <div class="inline-flex space-x-5 bg-white p-2 items-center">
-            <!-- Logo -->
-            <img src="Images/removed bg logo.png" alt="nothing" class="h-20  w-auto object-contain bg-white">
+    <!-- NAVBAR -->
+    <header class="bg-white shadow-md w-full">
 
 
+        <div class="flex justify-between items-center px-4 py-2">
 
-            <div><svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24" width="24" height="24">
-                    <path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 
-           9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 
-           2.5 2.5S13.38 11.5 12 11.5z" />
-                </svg>
-
-            </div>
-            <div>
-
-                <a href="" class="underline">Deliver to</a>
-                &#9660;
+            <!-- Logo + Deliver -->
+            <div class="flex items-center space-x-3">
+                <img src="Images/removed bg logo.png" alt="Logo" class="h-12 w-auto object-contain">
+                <div class="flex items-center space-x-1 text-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24" width="20" height="20">
+                        <path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 
+               9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 
+               2.5 2.5S13.38 11.5 12 11.5z" />
+                    </svg>
+                    <a href="#" class="underline">Deliver to</a>
+                    <span>&#9660;</span>
+                </div>
             </div>
 
+            <!-- Cart + Profile -->
+            <div class="flex items-center space-x-3">
+                <a href="#">
+                    <img src="Images/cart image.webp" alt="Cart" class="w-10 h-10 rounded-full">
+                </a>
+                <button>
+                    <img src="Images/Profile icon.jpg" alt="Profile" class="w-10 h-10 rounded-full">
+                </button>
+            </div>
         </div>
-        <div class="">
-            <input type="text" placeholder="Looking for Something? Start Here"
-                class="p-2 rounded-lg w-96  h-14 bg-[#EEEEEE]">
-        </div>
 
-        <div class="inline-flex">
-            <a href="">
-                <img src="Images/cart image.webp" alt="nothing" class="w-12 mx-5 rounded-full ">
-            </a>
+        <!-- Bottom Row: Categories + Search +welcome -->
+        <div class="flex  items-center px-4 py-2 space-x-3 md:justify-between">
 
 
-            <button>
-                <img src="Images/Profile icon.jpg" alt="nothing" class="w-12 mx-5 rounded-full">
-            </button>
+
+
+            <div class="h-10 flex items-center px-4 bg-blue-400 relative group inline-block  z-50">
+                <span class="mr-2">&#9776;</span>
+                <span class="hidden md:inline">Categories</span>
+                <span class="ml-2 hidden md:inline">&#9660;</span>
+                <div class="absolute left-0  hidden group-hover:block bg-white top-full w-[150px] shadow-lg z-50">
+                    <a href="" class="block mx-5 p-2 hover:bg-blue-400 rounded-lg my-5">Ultra Fresh</a>
+                    <a href="" class="block mx-5 p-2 hover:bg-blue-400 rounded-lg my-5">Grocery</a>
+                    <a href="" class="block mx-5 p-2 hover:bg-blue-400 rounded-lg my-5">Breakfast</a>
+                    <a href="" class="block mx-5 p-2 hover:bg-blue-400 rounded-lg my-5">Frozen food</a>
+                    <a href="" class="block mx-5 p-2 hover:bg-blue-400 rounded-lg my-5">Baby Products</a>
+                </div>
+            </div>
+
+            <!-- Search Bar -->
+            <div class=" md:w-1/2">
+                <input type="text" placeholder="Looking for Something? Start Here"
+                    class="w-full p-2 rounded-lg bg-[#EEEEEE] h-12">
+            </div>
+
+            <!--  Welcome -->
+            <div class="hidden md:inline-flex items-center mx-5 ">
+
+                <p class="ml-0  ">Welcome to Elegant Mart</p>
+            </div>
         </div>
 
     </header>
 
-    <div class="flex flex-row bg-white shadow-md">
-
-        <div class="h-10 flex items-center px-4 bg-blue-400 relative group inline-block">
-            <span class="mr-2">&#9776;</span>
-            <span>Categories</span>
-            <span class="ml-2">&#9662;</span>
-            <div class="absolute left-0  hidden group-hover:block bg-white top-full w-[150px]">
-                <a href="" class="block mx-5 p-2 hover:bg-blue-400 rounded-lg my-5">Ultra Fresh</a>
-                <a href="" class="block mx-5 p-2 hover:bg-blue-400 rounded-lg my-5">Grocery</a>
-                <a href="" class="block mx-5 p-2 hover:bg-blue-400 rounded-lg my-5">Breakfast</a>
-                <a href="" class="block mx-5 p-2 hover:bg-blue-400 rounded-lg my-5">Frozen food</a>
-                <a href="" class="block mx-5 p-2 hover:bg-blue-400 rounded-lg my-5">Baby Products</a>
-            </div>
+    <!-- SLIDESHOW -->
+    <div class="overflow-hidden relative md:mx-10 ">
+        <div class=" slideshow w-full  rounded-lg">
+            <img src="Images/slideShow pic 1.jpg" alt="Banner 1" class="rounded-lg ">
+            <img src="Images/slide show pic 2.png" alt="Banner 2" class="rounded-lg ">
+            <img src="Images/slide show img 3.jpg" alt="Banner 3" class="rounded-lg ">
+            <img src="Images/side show img 4.jpg" alt="Banner 4" class="rounded-lg ">
         </div>
-
-
-        <div class="inline-flex mx-5">
-            <a href="https://wa.me/030086894854" class="inline-flex items-center">
-                <img src="Images/whatsapp_logo.png" alt="whatsapp" class="w-10 ">
-                030086894854
-            </a>
-        </div>
-
-        <div class="flex  items-center">
-            <p class="ml-0 justify-end">Welcome to Elegant Mart</p>
-        </div>
-
     </div>
 
+
+    <!-- MAIN CONTENT -->
     <main>
 
-        <div class="flex items-center my-10">
+        <!-- SHOP BY CATEGORY -->
+        <div class="flex items-center my-6 md:my-10">
             <div class="flex-grow border-t border-gray-400"></div>
-            <span class="px-4 text-lg font-bold">Shop By Category</span>
+            <span class="px-2 md:px-4 text-base md:text-lg font-bold">Shop By Category</span>
             <div class="flex-grow border-t border-gray-400"></div>
         </div>
 
-        <div class="rounded-lg mx-10 bg-white flex overflow-x-auto overflow-y-hidden white-space-nowrap scroll-smooth p-10 border-gray-300 gap-2 
+        <!-- Category scroll -->
+        <div class="rounded-lg mx-2 md:mx-10 bg-white flex overflow-x-auto scroll-smooth p-5 md:p-10 gap-2 
      [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
-            <div class="group flex-none cursor-pointer">
-                <img src="Images/Ultra Fresh.jpg" alt="nothing" class="w-52 rounded-lg 
-            border border-white border-[3px] group-hover:border-blue-400">
-                <p style="text-align: center;" class="t-2 font-medium">Ultra Fresh</p>
+
+            <div class="group flex-none cursor-pointer w-40 md:w-52">
+                <img src="Images/Ultra Fresh.jpg" alt="Ultra Fresh"
+                    class="rounded-lg border border-white border-[3px] group-hover:border-blue-400">
+                <p class="text-center mt-2 font-medium">Ultra Fresh</p>
             </div>
-            <div class="group flex-none cursor-pointer">
-                <img src="Images/Grocery.jpg" alt="nothing"
-                    class="w-52 rounded-lg border border-white border-[3px] group-hover:border-blue-400  ">
-                <p style="text-align: center;" class="mt-2 font-medium">Grocery</p>
+            <div class="group flex-none cursor-pointer w-40 md:w-52">
+                <img src="Images/Grocery.jpg" alt="Grocery"
+                    class="rounded-lg border border-white border-[3px] group-hover:border-blue-400">
+                <p class="text-center mt-2 font-medium">Grocery</p>
             </div>
-            <div class="group flex-none cursor-pointer">
-                <img src="Images/breakfast.jpg" alt="nothing" class="w-52 rounded-lg 
-            border border-white border-[3px] group-hover:border-blue-400">
-                <p style="text-align: center;" class="t-2 font-medium">Breakfast and Dairy</p>
+            <div class="group flex-none cursor-pointer w-40 md:w-52">
+                <img src="Images/breakfast.jpg" alt="Breakfast"
+                    class="rounded-lg border border-white border-[3px] group-hover:border-blue-400">
+                <p class="text-center mt-2 font-medium">Breakfast & Dairy</p>
             </div>
-            <div class="group flex-none cursor-pointer">
-                <img src="Images/frozen food.jpg" alt="nothing" class="w-52 rounded-lg 
-            border border-white border-[3px] group-hover:border-blue-400">
-                <p style="text-align: center;" class="t-2 font-medium">Frozen Food</p>
+            <div class="group flex-none cursor-pointer w-40 md:w-52">
+                <img src="Images/frozen food.jpg" alt="Frozen"
+                    class="rounded-lg border border-white border-[3px] group-hover:border-blue-400">
+                <p class="text-center mt-2 font-medium">Frozen Food</p>
             </div>
-            <div class="group flex-none cursor-pointer">
-                <img src="Images/baby products.jpg" alt="nothing" class="w-52 rounded-lg 
-            border border-white border-[3px] group-hover:border-blue-400">
-                <p style="text-align: center;" class="t-2 font-medium">Baby Products</p>
+            <div class="group flex-none cursor-pointer w-40 md:w-52">
+                <img src="Images/baby products.jpg" alt="Baby"
+                    class="rounded-lg border border-white border-[3px] group-hover:border-blue-400">
+                <p class="text-center mt-2 font-medium">Baby Products</p>
             </div>
-            <div class="group flex-none cursor-pointer">
-                <img src="Images/health and beauty.jpg" alt="nothing" class="w-52 rounded-lg 
-            border border-white border-[3px] group-hover:border-blue-400">
-                <p style="text-align: center;" class="t-2 font-medium">Health and Beauty</p>
+            <div class="group flex-none cursor-pointer w-40 md:w-52">
+                <img src="Images/health and beauty.jpg" alt="Beauty"
+                    class="rounded-lg border border-white border-[3px] group-hover:border-blue-400">
+                <p class="text-center mt-2 font-medium">Health & Beauty</p>
             </div>
-            <div class="group flex-none cursor-pointer">
-                <img src="Images/household.jpg" alt="nothing" class="w-52 rounded-lg 
-            border border-white border-[3px] group-hover:border-blue-400">
-                <p style="text-align: center;" class="t-2 font-medium">Household </p>
+            <div class="group flex-none cursor-pointer w-40 md:w-52">
+                <img src="Images/household.jpg" alt="Household"
+                    class="rounded-lg border border-white border-[3px] group-hover:border-blue-400">
+                <p class="text-center mt-2 font-medium">Household</p>
             </div>
-            <div class="group flex-none  cursor-pointer">
-                <img src="Images/beverages.jpg" alt="nothing" class="w-52 rounded-lg 
-            border border-white border-[3px] group-hover:border-blue-400">
-                <p style="text-align: center;" class="t-2 font-medium">Beverages</p>
+            <div class="group flex-none cursor-pointer w-40 md:w-52">
+                <img src="Images/beverages.jpg" alt="Beverages"
+                    class="rounded-lg border border-white border-[3px] group-hover:border-blue-400">
+                <p class="text-center mt-2 font-medium">Beverages</p>
             </div>
-            <div class="group flex-none group cursor-pointer">
-                <img src="Images/sweets.jpg" alt="nothing"
-                    class="w-52 rounded-lg border border-white border-[3px] group-hover:border-blue-400">
-                <p style="text-align: center;" class="t-2 font-medium">Sweets and Chocolates</p>
+            <div class="group flex-none cursor-pointer w-40 md:w-52">
+                <img src="Images/sweets.jpg" alt="Sweets"
+                    class="rounded-lg border border-white border-[3px] group-hover:border-blue-400">
+                <p class="text-center mt-2 font-medium">Sweets & Chocolates</p>
             </div>
         </div>
 
-        <div class="flex items-center my-10">
+        <!-- ULTRA FRESH -->
+        <div class="flex items-center my-6 md:my-10">
             <div class="flex-grow border-t border-gray-400"></div>
-            <span class="px-4 text-lg font-bold">Ultra Fresh</span>
-            <div class="flex-grow border-t border-gray-400"></div>
-        </div>
-
-        </div>
-
-        <div class=" mx-10 ">
-            <a href="">
-                <img src="Images/Vegetables pic.png" alt="nothing" class="rounded-lg w-full">
-            </a>
-        </div>
-
-        <div class="rounded-lg my-10 bg-white my-10 mx-10 rounded-lg flex overflow-x-auto overflow-y-hidden white-space-nowrap scroll-smooth p-10 border-gray-300 gap-2 
-     [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden ">
-            <!-- 1 -->
-            <div class="group flex-none cursor-pointer">
-                <div class=" border border-white border-[3px] rounded-lg p-5 group-hover:border-blue-400">
-                    <img src="Images/tomatoes.octet-stream" alt="nothing" class="w-52 h-52 rounded-lg 
-            ">
-                    <p style="text-align: center;" class="t-2 font-medium">Fresh Tomatoe/Tamatar</p>
-
-                    <div class="">
-                        <p class="my-5 text-gray-500 text-xs">Per Kg</p>
-                        <div class="flex flex-row justify-between items-center">
-                            <span class="my-5">Rs 199</span>
-                            <a href="">
-                                <img src="Images/add-to-cart.png" alt="Add to Cart" class="w-8">
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- 2 -->
-
-            </div>
-            <div class="group flex-none cursor-pointer">
-                <div class=" border border-white border-[3px] rounded-lg p-5 group-hover:border-blue-400">
-                    <img src="Images/potato.png" alt="nothing" class="w-52 h-52 rounded-lg 
-            ">
-                    <p style="text-align: center;" class="t-2 font-medium">Fresh Tomatoe/Tamatar</p>
-
-                    <div class="">
-                        <p class="my-5 text-gray-500 text-xs">Per Kg</p>
-                        <div class="flex flex-row justify-between items-center">
-                            <span class="my-5">Rs 199</span>
-                            <a href="">
-                                <img src="Images/add-to-cart.png" alt="Add to Cart" class="w-8">
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-            <!-- 3 -->
-            <div class="group flex-none cursor-pointer">
-                <div class=" border border-white border-[3px] rounded-lg p-5 group-hover:border-blue-400">
-                    <img src="Images/onion.jpeg" alt="nothing" class="w-52 h-52 rounded-lg  
-            ">
-                    <p style="text-align: center;" class="t-2 font-medium">Fresh onion/Laal Pyaaz</p>
-
-                    <div class="">
-                        <p class="my-5 text-gray-500 text-xs">Per Kg</p>
-                        <div class="flex flex-row justify-between items-center">
-                            <span class="my-5">Rs 199</span>
-                            <a href="">
-                                <img src="Images/add-to-cart.png" alt="Add to Cart" class="w-8">
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-            <!-- 4 -->
-            <div class="group flex-none cursor-pointer">
-                <div class=" border border-white border-[3px] rounded-lg p-5 group-hover:border-blue-400">
-                    <img src="Images/egg-plant.png" alt="nothing" class="w-52 h-52 rounded-lg  
-            ">
-                    <p style="text-align: center;" class="t-2 font-medium">Egg Plant/ Gol Baingan</p>
-
-                    <div class="">
-                        <p class="my-5 text-gray-500 text-xs">Per Kg</p>
-                        <div class="flex flex-row justify-between items-center">
-                            <span class="my-5">Rs 199</span>
-                            <a href="">
-                                <img src="Images/add-to-cart.png" alt="Add to Cart" class="w-8">
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-            <!-- 5 -->
-            <div class="group flex-none cursor-pointer">
-                <div class=" border border-white border-[3px] rounded-lg p-5 group-hover:border-blue-400">
-                    <img src="Images/banana.jpg" alt="nothing" class="w-52 h-52 rounded-lg  
-            ">
-                    <p style="text-align: center;" class="t-2 font-medium">Fresh Banana</p>
-
-                    <div class="">
-                        <p class="my-5 text-gray-500 text-xs">Per Kg</p>
-                        <div class="flex flex-row justify-between items-center">
-                            <span class="my-5">Rs 199</span>
-                            <a href="">
-                                <img src="Images/add-to-cart.png" alt="Add to Cart" class="w-8">
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-            <!-- 6 -->
-            <div class="group flex-none cursor-pointer">
-                <div class=" border border-white border-[3px] rounded-lg p-5 group-hover:border-blue-400">
-                    <img src="Images/apple.png" alt="nothing" class="w-52 h-52 rounded-lg  
-            ">
-                    <p style="text-align: center;" class="t-2 font-medium">Fresh Apple</p>
-
-                    <div class="">
-                        <p class="my-5 text-gray-500 text-xs">Per Kg</p>
-                        <div class="flex flex-row justify-between items-center">
-                            <span class="my-5">Rs 199</span>
-                            <a href="">
-                                <img src="Images/add-to-cart.png" alt="Add to Cart" class="w-8">
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-            <!-- 7 -->
-            <div class="group flex-none cursor-pointer">
-                <div class=" border border-white border-[3px] rounded-lg p-5 group-hover:border-blue-400">
-                    <img src="Images/grapes.png" alt="nothing" class="w-52 h-52 rounded-lg  
-            ">
-                    <p style="text-align: center;" class="t-2 font-medium">Fresh Grapes</p>
-
-                    <div class="">
-                        <p class="my-5 text-gray-500 text-xs">Per Kg</p>
-                        <div class="flex flex-row justify-between items-center">
-                            <span class="my-5">Rs 199</span>
-                            <a href="">
-                                <img src="Images/add-to-cart.png" alt="Add to Cart" class="w-8">
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-
-
-
-
-        </div>
-        <!-- Brek line -->
-        <div class="flex items-center my-10">
-            <div class="flex-grow border-t border-gray-400"></div>
-            <span class="px-4 text-lg font-bold">Grocery</span>
+            <span class="px-2 md:px-4 text-base md:text-lg font-bold">Ultra Fresh</span>
             <div class="flex-grow border-t border-gray-400"></div>
         </div>
 
-        <!--         
-            <div class="flex-none  mx-10 shadow-md rounded-lg">
-                <a href="">
-                    <img src="Images/Grocery Tag.jpg" alt="nothing" class="rounded-lg">
-                </a>
+        <!-- Ultra Fresh Banner -->
+        <div class="mx-2 md:mx-10">
+            <a href="#"><img src="Images/Vegetables pic.png" alt="Vegetables" class="rounded-lg w-full"></a>
+        </div>
+
+        <!-- Ultra Fresh Products -->
+        <div class="rounded-lg my-6 md:my-10 bg-white mx-2 md:mx-10 flex overflow-x-auto scroll-smooth p-5 md:p-10 gap-2 
+     [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+
+            <!-- Product Cards -->
+            <div class="group flex-none w-44 md:w-60">
+                <div class="border border-white border-[3px] rounded-lg p-3 group-hover:border-blue-400">
+                    <img src="Images/tomatoes.png" alt="Tomato" class="w-full h-40 md:h-52 rounded-lg">
+                    <p class="text-center mt-2 font-medium">Fresh Tomato</p>
+                    <p class="my-2 text-gray-500 text-xs">Per Kg</p>
+                    <div class="flex justify-between">
+                        <span>Rs 199</span>
+                        <a href="#"><img src="Images/add-to-cart.png" class="w-6 md:w-8"></a>
+                    </div>
+                </div>
             </div>
 
-
-
-
-
-            <div class=" my-10 bg-white my-10 mx-10 rounded-lg flex overflow-x-auto overflow-y-hidden white-space-nowrap scroll-smooth p-10 border-gray-300 gap-2 
-            [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden ">
-                
-                <div class="group flex-none cursor-pointer">
-                    <div class=" border border-white border-[3px] rounded-lg p-5 group-hover:border-blue-400">
-                        <img src="Images/sugar bag.png" alt="nothing" class="w-52 h-52 rounded-lg  
-                ">
-                        <p style="text-align: center;" class="t-2 font-medium">Sugar</p>
-
-                        <div class="">
-                            <p class="my-5 text-gray-500 text-xs">1 Kg</p>
-                            <div class="flex flex-row justify-between items-center">
-                                <span class="my-5">Rs 177</span>
-                                <a href="">
-                                    <img src="Images/add-to-cart.png" alt="Add to Cart" class="w-8">
-                                </a>
-                            </div>
-
-                        </div>
+            <div class="group flex-none w-44 md:w-60">
+                <div class="border border-white border-[3px] rounded-lg p-3 group-hover:border-blue-400">
+                    <img src="Images/potato.png" alt="Potato" class="w-full h-40 md:h-52 rounded-lg">
+                    <p class="text-center mt-2 font-medium">Fresh Potato</p>
+                    <p class="my-2 text-gray-500 text-xs">Per Kg</p>
+                    <div class="flex justify-between">
+                        <span>Rs 160</span>
+                        <a href="#"><img src="Images/add-to-cart.png" class="w-6 md:w-8"></a>
                     </div>
-
                 </div>
-                
-                <div class="group flex-none cursor-pointer">
-                    <div class=" border border-white border-[3px] rounded-lg p-5 group-hover:border-blue-400">
-                        <img src="Images/NATIONAL IODIZED SALT REFINED 800GM.png" alt="nothing" class="w-52 h-52 rounded-lg  
-                ">
-                        <p style="text-align: center;" class="t-2 font-medium">NATIONAL IODIZED SALT REFINED</p>
+            </div>
 
-                        <div class="">
-                            <p class="my-5 text-gray-500 text-xs">800Gm</p>
-                            <div class="flex flex-row justify-between items-center">
-                                <span class="my-5">Rs 49</span>
-                                <a href="">
-                                    <img src="Images/add-to-cart.png" alt="Add to Cart" class="w-8">
-                                </a>
-                            </div>
-
-                        </div>
+            <div class="group flex-none w-44 md:w-60">
+                <div class="border border-white border-[3px] rounded-lg p-3 group-hover:border-blue-400">
+                    <img src="Images/onion.jpeg" alt="Onion" class="w-full h-40 md:h-52 rounded-lg">
+                    <p class="text-center mt-2 font-medium">Fresh Onion</p>
+                    <p class="my-2 text-gray-500 text-xs">Per Kg</p>
+                    <div class="flex justify-between">
+                        <span>Rs 120</span>
+                        <a href="#"><img src="Images/add-to-cart.png" class="w-6 md:w-8"></a>
                     </div>
-
                 </div>
-                
-                <div class="group flex-none cursor-pointer">
-                    <div class=" border border-white border-[3px] rounded-lg p-5 group-hover:border-blue-400">
-                        <img src="Images/Sunridge aata.jpg" alt="nothing" class="w-52 h-52 rounded-lg  
-                ">
-                        <p style="text-align: center;" class="t-2 font-medium">Floor/Aata</p>
+            </div>
 
-                        <div class="">
-                            <p class="my-5 text-gray-500 text-xs">5Kg</p>
-                            <div class="flex flex-row justify-between items-center">
-                                <span class="my-5">Rs 749</span>
-                                <a href="">
-                                    <img src="Images/add-to-cart.png" alt="Add to Cart" class="w-8">
-                                </a>
-                            </div>
-
-                        </div>
+            <div class="group flex-none w-44 md:w-60">
+                <div class="border border-white border-[3px] rounded-lg p-3 group-hover:border-blue-400">
+                    <img src="Images/egg-plant.png" alt="Eggplant" class="w-full h-40 md:h-52 rounded-lg">
+                    <p class="text-center mt-2 font-medium">Egg Plant</p>
+                    <p class="my-2 text-gray-500 text-xs">Per Kg</p>
+                    <div class="flex justify-between">
+                        <span>Rs 150</span>
+                        <a href="#"><img src="Images/add-to-cart.png" class="w-6 md:w-8"></a>
                     </div>
-
                 </div>
+            </div>
 
-                
-                <div class="group flex-none cursor-pointer">
-                    <div class=" border border-white border-[3px] rounded-lg p-5 group-hover:border-blue-400">
-                        <img src="Images/Shan masala.png" alt="nothing" class="w-52 h-52 rounded-lg  
-                ">
-                        <p style="text-align: center;" class="t-2 font-medium">Shan Achar Gosht Masala</p>
-
-                        <div class="">
-                            <p class="my-5 text-gray-500 text-xs">50Gg</p>
-                            <div class="flex flex-row justify-between items-center">
-                                <span class="my-5">Rs 139</span>
-                                <a href="">
-                                    <img src="Images/add-to-cart.png" alt="Add to Cart" class="w-8">
-                                </a>
-                            </div>
-
-                        </div>
+            <div class="group flex-none w-44 md:w-60">
+                <div class="border border-white border-[3px] rounded-lg p-3 group-hover:border-blue-400">
+                    <img src="Images/banana.jpg" alt="Banana" class="w-full h-40 md:h-52 rounded-lg">
+                    <p class="text-center mt-2 font-medium">Fresh Banana</p>
+                    <p class="my-2 text-gray-500 text-xs">Dozen</p>
+                    <div class="flex justify-between">
+                        <span>Rs 250</span>
+                        <a href="#"><img src="Images/add-to-cart.png" class="w-6 md:w-8"></a>
                     </div>
-
                 </div>
-                
-                <div class="group flex-none cursor-pointer">
-                    <div class=" border border-white border-[3px] rounded-lg p-5 group-hover:border-blue-400">
-                        <img src="Images/lipton.png" alt="nothing" class="w-52 h-52 rounded-lg  
-                ">
-                        <p style="text-align: center;" class="t-2 font-medium">Lipton tea Danedar Strong</p>
+            </div>
 
-                        <div class="">
-                            <p class="my-5 text-gray-500 text-xs">430Gm</p>
-                            <div class="flex flex-row justify-between items-center">
-                                <span class="my-5">Rs 1144</span>
-                                <a href="">
-                                    <img src="Images/add-to-cart.png" alt="Add to Cart" class="w-8">
-                                </a>
-                            </div>
-
-                        </div>
+            <div class="group flex-none w-44 md:w-60">
+                <div class="border border-white border-[3px] rounded-lg p-3 group-hover:border-blue-400">
+                    <img src="Images/apple.png" alt="Apple" class="w-full h-40 md:h-52 rounded-lg">
+                    <p class="text-center mt-2 font-medium">Fresh Apple</p>
+                    <p class="my-2 text-gray-500 text-xs">Per Kg</p>
+                    <div class="flex justify-between">
+                        <span>Rs 300</span>
+                        <a href="#"><img src="Images/add-to-cart.png" class="w-6 md:w-8"></a>
                     </div>
-
                 </div>
-                
+            </div>
 
-                <div class="group flex-none cursor-pointer">
-                    <div class=" border border-white border-[3px] rounded-lg p-5 group-hover:border-blue-400">
-                        <img src="Images/ketchup.png" alt="nothing" class="w-52 h-52 rounded-lg  
-                ">
-                        <p style="text-align: center;" class="t-2 font-medium">National Tomato Ketchup</p>
-
-                        <div class="">
-                            <p class="my-5 text-gray-500 text-xs">800Gm</p>
-                            <div class="flex flex-row justify-between items-center">
-                                <span class="my-5">Rs 349</span>
-                                <a href="">
-                                    <img src="Images/add-to-cart.png" alt="Add to Cart" class="w-8">
-                                </a>
-                            </div>
-
-                        </div>
+            <div class="group flex-none w-44 md:w-60">
+                <div class="border border-white border-[3px] rounded-lg p-3 group-hover:border-blue-400">
+                    <img src="Images/grapes.png" alt="Grapes" class="w-full h-40 md:h-52 rounded-lg">
+                    <p class="text-center mt-2 font-medium">Fresh Grapes</p>
+                    <p class="my-2 text-gray-500 text-xs">Per Kg</p>
+                    <div class="flex justify-between">
+                        <span>Rs 350</span>
+                        <a href="#"><img src="Images/add-to-cart.png" class="w-6 md:w-8"></a>
                     </div>
-
                 </div>
+            </div>
 
-            </div> -->
+        </div>
+
+        <!-- GROCERY -->
     </main>
 
-    <footer class="flex flex-row justify-between bg-blue-400 h-80">
-        <div class="flex flex-row">
-            <img src="Images/removed bg logo.png" alt="Logo" class="w-44 bg-[#00a4e3.] my-10 mx-10 mr-5">
-            <div class="my-20">
+    <!-- FOOTER -->
+    <footer class="flex flex-col md:flex-row justify-between bg-blue-400 p-5 md:h-80">
+        <div class="flex flex-col md:flex-row items-center md:items-start">
+            <img src="Images/removed bg logo.png" alt="Logo" class="w-28 md:w-44 my-5 md:my-10 mx-5 md:mx-10">
+            <div class="text-center md:text-left my-2 md:my-20">
                 <strong class="text-white">Contact:</strong>
-                <p class="text-white font-bold">whatsapp:030086899485</p>
-                <p class="text-white font-bold">Email:elegant@gmail.com</p>
-                <p class="text-white font-bold">Address:Iqbal Avenue Phase 3 Block C Market Elegant Mart</p>
+                <p class="text-white font-bold">WhatsApp: 0300-86899485</p>
+                <p class="text-white font-bold">Email: elegant@gmail.com</p>
+                <p class="text-white font-bold">Address: Iqbal Avenue Phase 3 Block C Market Elegant Mart</p>
             </div>
         </div>
     </footer>
+
 </body>
 
 </html>
