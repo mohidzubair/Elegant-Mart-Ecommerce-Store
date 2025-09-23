@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - Elegant Mart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .pop-out {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .pop-out:hover,
+        .pop-out:active {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+
+<body class="bg-[#EEEEEE]">
+
+    <!-- NAVBAR -->
+    <header class="bg-white shadow-md w-full">
+        <div class="flex justify-between items-center px-4 py-2">
+            <!-- Logo -->
+            <div class="flex items-center space-x-3">
+                <a href="index.html">
+                    <img src="Images/removed bg logo.png" alt="Logo" class="h-12 w-auto object-contain">
+                </a>
+            </div>
+
+            <!-- Cart + Profile -->
+            <div class="flex items-center space-x-3">
+                <a href="cart.html" class="relative">
+                    <img src="Images/cart image.webp" alt="Cart" class="w-10 h-10 rounded-full">
+                    <span
+                        class="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">3</span>
+                </a>
+                <button>
+                    <img src="Images/Profile icon.jpg" alt="Profile" class="w-10 h-10 rounded-full">
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- CART SECTION -->
+    <main class="container mx-auto px-4 md:px-10 py-8">
+
+        <!-- FLEX WRAPPER for Cart + Summary -->
+        <div class="flex flex-col md:flex-row gap-6">
+
+            <!-- LEFT: Cart Items -->
+            <div class="flex-1 bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-bold mb-6">Shopping Cart</h2>
+
+                <!-- Example Cart Item -->
+                <div class="flex items-center justify-between border-b py-4">
+                    <div class="flex items-center space-x-4">
+                        <img src="Images/tomatoes.png" alt="Tomato" class="w-16 h-16 rounded-lg">
+                        <div>
+                            <h4 class="font-semibold">Fresh Tomato</h4>
+                            <p class="text-sm text-gray-500">Per Kg</p>
+                            <p class="font-medium">Rs 199</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <button class="px-2 py-1 bg-gray-200 rounded">-</button>
+                        <span>2</span>
+                        <button class="px-2 py-1 bg-gray-200 rounded">+</button>
+                    </div>
+                    <p class="font-semibold">Rs 398</p>
+                    <button class="text-red-500 hover:text-red-700">✕</button>
+                </div>
+
+                <!-- Another Example Cart Item -->
+                <div class="flex items-center justify-between border-b py-4">
+                    <div class="flex items-center space-x-4">
+                        <img src="Images/apple.png" alt="Apple" class="w-16 h-16 rounded-lg">
+                        <div>
+                            <h4 class="font-semibold">Fresh Apple</h4>
+                            <p class="text-sm text-gray-500">Per Kg</p>
+                            <p class="font-medium">Rs 300</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <button class="px-2 py-1 bg-gray-200 rounded">-</button>
+                        <span>1</span>
+                        <button class="px-2 py-1 bg-gray-200 rounded">+</button>
+                    </div>
+                    <p class="font-semibold">Rs 300</p>
+                    <button class="text-red-500 hover:text-red-700">✕</button>
+                </div>
+
+                <!-- Another Example Cart Item -->
+                <div class="flex items-center justify-between border-b py-4">
+                    <div class="flex items-center space-x-4">
+                        <img src="Images/banana.jpg" alt="Banana" class="w-16 h-16 rounded-lg">
+                        <div>
+                            <h4 class="font-semibold">Fresh Banana</h4>
+                            <p class="text-sm text-gray-500">Dozen</p>
+                            <p class="font-medium">Rs 250</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <button class="px-2 py-1 bg-gray-200 rounded">-</button>
+                        <span>3</span>
+                        <button class="px-2 py-1 bg-gray-200 rounded">+</button>
+                    </div>
+                    <p class="font-semibold">Rs 750</p>
+                    <button class="text-red-500 hover:text-red-700">✕</button>
+                </div>
+            </div>
+
+            <!-- RIGHT: Order Summary -->
+            <div class="md:w-1/3">
+                <div class="bg-white p-6 rounded-lg shadow-md sticky top-6">
+                    <h3 class="text-lg font-semibold mb-4">Order Summary</h3>
+                    <div class="flex justify-between mb-2">
+                        <span>Subtotal</span>
+                        <span>Rs 1,448</span>
+                    </div>
+                    <div class="flex justify-between mb-2">
+                        <span>Shipping</span>
+                        <span class="text-green-600">Free</span>
+                    </div>
+                    <div class="flex justify-between mb-2">
+                        <span>Discount</span>
+                        <span>- Rs 48</span>
+                    </div>
+                    <div class="border-t pt-2 flex justify-between font-bold text-lg">
+                        <span>Total</span>
+                        <span>Rs 1,400</span>
+                    </div>
+                    <button
+                        class="w-full mt-4 bg-[#dc3545] text-white py-3 rounded-lg hover:bg-white hover:text-[#dc3545] hover:border hover:border-[#dc3545] transition font-medium">
+                        Proceed to Checkout
+                    </button>
+                    <a href="index.html" class="block mt-3 text-black hover:underline text-center">← Continue
+                        Shopping</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Retaled products -->
+        <div class="w-full mt-6 bg-gray-200 p-4 rounded-lg shadow ">
+            <!-- you may like separater -->
+            <div class="flex items-center my-6 md:my-10">
+                <div class="flex-grow border-t border-gray-400"></div>
+                <span class="px-2 md:px-4 text-base md:text-lg font-bold">You May Also Like</span>
+                <div class="flex-grow border-t border-gray-400"></div>
+            </div>
+
+
+
+
+            <div class="flex flex-wrap items-center justify-center">
+                <div class="group flex-none w-44 md:w-60 pop-out pop-out">
+                    <div class="border border-gray-200 border-[3px] rounded-lg p-3 group-hover:border-[#E70E02]">
+                        <img src="Images/tomatoes.png" alt="Tomato" class="w-full h-40 md:h-52 rounded-lg ">
+                        <p class="text-center mt-2 font-medium">Fresh Tomato</p>
+                        <p class="my-2 text-gray-500 text-xs">Per Kg</p>
+                        <div class="flex justify-between">
+                            <span>Rs 199</span>
+                            <a href="#"><img src="Images/add-to-cart.png" class="w-6 md:w-8"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group flex-none w-44 md:w-60 pop-out">
+                    <div class="border border-gray-200 border-[3px] rounded-lg p-3 group-hover:border-[#E70E02]">
+                        <img src="Images/potato.png" alt="Potato" class="w-full h-40 md:h-52 rounded-lg ">
+                        <p class="text-center mt-2 font-medium">Fresh Potato</p>
+                        <p class="my-2 text-gray-500 text-xs">Per Kg</p>
+                        <div class="flex justify-between">
+                            <span>Rs 160</span>
+                            <a href="#"><img src="Images/add-to-cart.png" class="w-6 md:w-8"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group flex-none w-44 md:w-60 pop-out">
+                    <div class="border border-gray-200 border-[3px] rounded-lg p-3 group-hover:border-[#E70E02]">
+                        <img src="Images/onion.jpeg" alt="Onion" class="w-full h-40 md:h-52 rounded-lg ">
+                        <p class="text-center mt-2 font-medium">Fresh Onion</p>
+                        <p class="my-2 text-gray-500 text-xs">Per Kg</p>
+                        <div class="flex justify-between">
+                            <span>Rs 120</span>
+                            <a href="#"><img src="Images/add-to-cart.png" class="w-6 md:w-8"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group flex-none w-44 md:w-60 pop-out">
+                    <div class="border border-gray-200 border-[3px] rounded-lg p-3 group-hover:border-[#E70E02]">
+                        <img src="Images/egg-plant.png" alt="Eggplant" class="w-full h-40 md:h-52 rounded-lg ">
+                        <p class="text-center mt-2 font-medium">Egg Plant</p>
+                        <p class="my-2 text-gray-500 text-xs">Per Kg</p>
+                        <div class="flex justify-between">
+                            <span>Rs 150</span>
+                            <a href="#"><img src="Images/add-to-cart.png" class="w-6 md:w-8"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group flex-none w-44 md:w-60 pop-out">
+                    <div class="border border-gray-200 border-[3px] rounded-lg p-3 group-hover:border-[#E70E02]">
+                        <img src="Images/banana.jpg" alt="Banana" class="w-full h-40 md:h-52 rounded-lg ">
+                        <p class="text-center mt-2 font-medium">Fresh Banana</p>
+                        <p class="my-2 text-gray-500 text-xs">Dozen</p>
+                        <div class="flex justify-between">
+                            <span>Rs 250</span>
+                            <a href="#"><img src="Images/add-to-cart.png" class="w-6 md:w-8"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group flex-none w-44 md:w-60 pop-out">
+                    <div class="border border-gray-200 border-[3px] rounded-lg p-3 group-hover:border-[#E70E02]">
+                        <img src="Images/apple.png" alt="Apple" class="w-full h-40 md:h-52 rounded-lg ">
+                        <p class="text-center mt-2 font-medium">Fresh Apple</p>
+                        <p class="my-2 text-gray-500 text-xs">Per Kg</p>
+                        <div class="flex justify-between">
+                            <span>Rs 300</span>
+                            <a href="#"><img src="Images/add-to-cart.png" class="w-6 md:w-8"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group flex-none w-44 md:w-60 pop-out">
+                    <div class="border border-gray-200 border-[3px]  rounded-lg p-3 group-hover:border-[#E70E02]">
+                        <img src="Images/grapes.png" alt="Grapes" class="w-full h-40 md:h-52 rounded-lg ">
+                        <p class="text-center mt-2 font-medium">Fresh Grapes</p>
+                        <p class="my-2 text-gray-500 text-xs">Per Kg</p>
+                        <div class="flex justify-between">
+                            <span>Rs 350</span>
+                            <a href="#"><img src="Images/add-to-cart.png" class="w-6 md:w-8"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+
+    </main>
+
+    <!-- EMPTY CART STATE (show only if no items in cart) -->
+    <!-- 
+  <div class="text-center py-20">
+    <img src="Images/empty-cart.png" alt="Empty Cart" class="mx-auto w-40 mb-6">
+    <h2 class="text-2xl font-bold mb-4">Your cart is empty 😔</h2>
+    <a href="index.html" class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition">Start Shopping</a>
+  </div>
+  -->
+
+    <!-- FOOTER -->
+    <footer class="bg-[#dc3545] text-white py-10 mt-10">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-10">
+                <div class="flex flex-col items-center md:items-start text-center md:text-left">
+                    <img src="Images/removed bg logo.png" alt="Logo" class="w-32 md:w-44 mb-4 drop-shadow-lg">
+                    <p class="text-sm opacity-80">Your trusted shopping partner</p>
+                </div>
+                <div class="text-center md:text-left">
+                    <h3 class="text-lg font-bold mb-3">📞 Contact Us</h3>
+                    <p>WhatsApp: <span class="font-semibold">0300-86899485</span></p>
+                    <p>Email: <span class="font-semibold">elegant@gmail.com</span></p>
+                    <p>Address: Iqbal Avenue Phase 3, Block C, Elegant Mart</p>
+                </div>
+                <div class="text-center md:text-left">
+                    <h3 class="text-lg font-bold mb-3">🔗 Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-gray-200 transition">Home</a></li>
+                        <li><a href="#" class="hover:text-gray-200 transition">Products</a></li>
+                        <li><a href="#" class="hover:text-gray-200 transition">Categories</a></li>
+                        <li><a href="cart.html" class="hover:text-gray-200 transition">Cart</a></li>
+                    </ul>
+                </div>
+                <div class="text-center md:text-left">
+                    <h3 class="text-lg font-bold mb-3">🌐 Follow Us</h3>
+                    <div class="flex gap-4 justify-center md:justify-start">
+                        <a href="#"><img src="https://img.icons8.com/ios-filled/30/ffffff/facebook-new.png"
+                                alt="Facebook"></a>
+                        <a href="#"><img src="https://img.icons8.com/ios-filled/30/ffffff/instagram-new.png"
+                                alt="Instagram"></a>
+                        <a href="#"><img src="https://img.icons8.com/ios-filled/30/ffffff/twitter.png"
+                                alt="Twitter"></a>
+                        <a href="#"><img src="https://img.icons8.com/ios-filled/30/ffffff/whatsapp.png"
+                                alt="WhatsApp"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white mt-10 pt-4 text-center text-sm opacity-80">
+                © 2025 Elegant Mart. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+
+
+</html>

@@ -143,24 +143,37 @@
 
 
 
-            <div class="h-10 flex items-center px-4 bg-[#E62727] relative group inline-block  z-50">
+            <div class="h-10 flex items-center px-4 bg-[#dc3545] relative group inline-block  z-50">
                 <span class="mr-2">&#9776;</span>
                 <span class="hidden md:inline">Categories</span>
                 <span class="ml-2 hidden md:inline">&#9660;</span>
                 <div class="absolute left-0  hidden group-hover:block bg-white top-full w-[150px] shadow-lg z-50">
-                    <a href="" class="block mx-5 p-2 hover:bg-[#E62727] rounded-lg my-5">Ultra Fresh</a>
-                    <a href="" class="block mx-5 p-2 hover:bg-[#E62727] rounded-lg my-5">Grocery</a>
-                    <a href="" class="block mx-5 p-2 hover:bg-[#E62727] rounded-lg my-5">Breakfast</a>
-                    <a href="" class="block mx-5 p-2 hover:bg-[#E62727] rounded-lg my-5">Frozen food</a>
-                    <a href="" class="block mx-5 p-2 hover:bg-[#E62727] rounded-lg my-5">Baby Products</a>
+                    <a href="" class="block mx-5 p-2 hover:bg-[#dc3545] rounded-lg my-5">Ultra Fresh</a>
+                    <a href="" class="block mx-5 p-2 hover:bg-[#dc3545] rounded-lg my-5">Grocery</a>
+                    <a href="" class="block mx-5 p-2 hover:bg-[#dc3545] rounded-lg my-5">Breakfast</a>
+                    <a href="" class="block mx-5 p-2 hover:bg-[#dc3545] rounded-lg my-5">Frozen food</a>
+                    <a href="" class="block mx-5 p-2 hover:bg-[#dc3545] rounded-lg my-5">Baby Products</a>
                 </div>
             </div>
 
             <!-- Search Bar -->
-            <div class=" md:w-1/2">
+            <!-- <div class=" md:w-1/2">
                 <input type="text" placeholder="Looking for Something? Start Here"
-                    class="w-full p-2 rounded-lg bg-[#EEEEEE] h-12">
+                    class="w-full p-2 rounded-full bg-[#EEEEEE] h-12  px-3">
+                
+            </div> -->
+
+            <div class="md:w-1/2 flex items-center space-x-2">
+                <!-- Search Input -->
+                <input type="text" placeholder="Looking for Something? Start Here"
+                    class="w-full p-2 rounded-full bg-[#EEEEEE] h-12 px-3">
+
+                <!-- All Products Button -->
+                <button class="px-4 mx-2 h-12 rounded-lg bg-[#dc3545] text-white font-medium md:whitespace-nowrap ">
+                    <span>All Products</span>
+                </button>
             </div>
+
 
             <!--  Welcome -->
             <div class="hidden md:inline-flex items-center mx-5 ">
@@ -351,7 +364,7 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="bg-[#E62727] text-white py-10">
+    <footer class="bg-[#dc3545] text-white py-10">
         <div class="container mx-auto px-6 md:px-12">
             <!-- Flex wrapper -->
             <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-10">
