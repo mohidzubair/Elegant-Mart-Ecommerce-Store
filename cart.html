@@ -56,8 +56,8 @@
                 <h2 class="text-2xl font-bold mb-6">Shopping Cart</h2>
 
                 <!-- Example Cart Item -->
-                <div class="flex items-center justify-between border-b py-4">
-                    <div class="flex items-center space-x-4">
+                <div class="flex items-center justify-between border-b py-4 ">
+                    <div class="flex items-center space-x-4 ">
                         <img src="Images/tomatoes.png" alt="Tomato" class="w-16 h-16 rounded-lg">
                         <div>
                             <h4 class="font-semibold">Fresh Tomato</h4>
@@ -65,7 +65,7 @@
                             <p class="font-medium">Rs 199</p>
                         </div>
                     </div>
-                    <div class="flex items-center space-x-3">
+                    <div class="flex items-center space-x-3 ">
                         <button class="px-2 py-1 bg-gray-200 rounded">-</button>
                         <span>2</span>
                         <button class="px-2 py-1 bg-gray-200 rounded">+</button>
@@ -75,7 +75,7 @@
                 </div>
 
                 <!-- Another Example Cart Item -->
-                <div class="flex items-center justify-between border-b py-4">
+                <div class="flex items-center justify-between border-b py-4 ">
                     <div class="flex items-center space-x-4">
                         <img src="Images/apple.png" alt="Apple" class="w-16 h-16 rounded-lg">
                         <div>
@@ -94,7 +94,7 @@
                 </div>
 
                 <!-- Another Example Cart Item -->
-                <div class="flex items-center justify-between border-b py-4">
+                <div class="flex items-center justify-between border-b py-4 ">
                     <div class="flex items-center space-x-4">
                         <img src="Images/banana.jpg" alt="Banana" class="w-16 h-16 rounded-lg">
                         <div>
@@ -155,85 +155,99 @@
 
             <!-- related products -->
 
-            <div class="flex flex-wrap items-center justify-center gap-2 bg-white">
+            <!-- related products -->
+            <div class="flex flex-wrap items-center justify-center gap-2 bg-white p-4 rounded-lg">
                 <div
-                    class="group flex-none w-1/2 md:w-60 shadow-md border-[3px] border-transparent hover:border-[#E70E02] rounded-lg p-3 my-2">
-                    <img src="Images/tomatoes.png" alt="Tomato" class="w-full h-40 md:h-52 rounded-lg pop-out">
+                    class="group flex-none w-[calc(50%-0.25rem)] md:w-60 shadow-md border-[3px] border-transparent hover:border-[#E70E02] rounded-lg p-3 my-2">
+                    <div class="w-full h-40 md:h-52 bg-red-100 rounded-lg pop-out flex items-center justify-center">
+                        <img src="Images/tomatoes.png" alt="Tomato" class="w-full h-40 md:h-52 rounded-lg pop-out">
+                    </div>
                     <p class="text-center mt-2 font-medium">Fresh Tomato</p>
                     <p class="my-2 text-gray-500 text-xs">Per Kg</p>
-                    <div class="flex justify-between">
-                        <span>Rs 199</span>
+                    <div class="flex justify-between items-center">
+                        <span class="font-semibold">Rs 199</span>
                         <a href="#"><img src="Images/add-to-cart.png" class="w-6 md:w-8"></a>
                     </div>
                 </div>
 
                 <div
-                    class="group flex-none w-1/2 md:w-60 shadow-md border-[3px] border-transparent hover:border-[#E70E02] rounded-lg p-3 my-2">
-                    <img src="Images/potato.png" alt="Potato" class="w-full h-40 md:h-52 rounded-lg pop-out">
+                    class="group flex-none w-[calc(50%-0.25rem)] md:w-60 shadow-md border-[3px] border-transparent hover:border-[#E70E02] rounded-lg p-3 my-2">
+                    <div class="w-full h-40 md:h-52 bg-yellow-100 rounded-lg pop-out flex items-center justify-center">
+                        <img src="Images/potato.png" alt="Potato" class="w-full h-40 md:h-52 rounded-lg pop-out">
+                    </div>
                     <p class="text-center mt-2 font-medium">Fresh Potato</p>
                     <p class="my-2 text-gray-500 text-xs">Per Kg</p>
-                    <div class="flex justify-between">
-                        <span>Rs 160</span>
+                    <div class="flex justify-between items-center">
+                        <span class="font-semibold">Rs 160</span>
                         <a href="#"><img src="Images/add-to-cart.png" class="w-6 md:w-8"></a>
                     </div>
                 </div>
 
                 <div
-                    class="group flex-none w-1/2 md:w-60 shadow-md border-[3px] border-transparent hover:border-[#E70E02] rounded-lg p-3 my-2">
-                    <img src="Images/onion.jpeg" alt="Onion" class="w-full h-40 md:h-52 rounded-lg pop-out">
+                    class="group flex-none w-[calc(50%-0.25rem)] md:w-60 shadow-md border-[3px] border-transparent hover:border-[#E70E02] rounded-lg p-3 my-2">
+                    <div class="w-full h-40 md:h-52 bg-purple-100 rounded-lg pop-out flex items-center justify-center">
+                        <img src="Images/onion.jpeg" alt="Onion" class="w-full h-40 md:h-52 rounded-lg pop-out">
+                    </div>
                     <p class="text-center mt-2 font-medium">Fresh Onion</p>
                     <p class="my-2 text-gray-500 text-xs">Per Kg</p>
-                    <div class="flex justify-between">
-                        <span>Rs 120</span>
+                    <div class="flex justify-between items-center">
+                        <span class="font-semibold">Rs 120</span>
                         <a href="#"><img src="Images/add-to-cart.png" class="w-6 md:w-8"></a>
                     </div>
                 </div>
 
                 <div
-                    class="group flex-none w-1/2 md:w-60 shadow-md border-[3px] border-transparent hover:border-[#E70E02] rounded-lg p-3 my-2">
-                    <img src="Images/egg-plant.png" alt="Eggplant" class="w-full h-40 md:h-52 rounded-lg pop-out">
+                    class="group flex-none w-[calc(50%-0.25rem)] md:w-60 shadow-md border-[3px] border-transparent hover:border-[#E70E02] rounded-lg p-3 my-2">
+                    <div class="w-full h-40 md:h-52 bg-green-100 rounded-lg pop-out flex items-center justify-center">
+                        <img src="Images/egg-plant.png" alt="Eggplant" class="w-full h-40 md:h-52 rounded-lg pop-out">
+                    </div>
                     <p class="text-center mt-2 font-medium">Egg Plant</p>
                     <p class="my-2 text-gray-500 text-xs">Per Kg</p>
-                    <div class="flex justify-between">
-                        <span>Rs 150</span>
+                    <div class="flex justify-between items-center">
+                        <span class="font-semibold">Rs 150</span>
                         <a href="#"><img src="Images/add-to-cart.png" class="w-6 md:w-8"></a>
                     </div>
                 </div>
 
                 <div
-                    class="group flex-none w-1/2 md:w-60 shadow-md border-[3px] border-transparent hover:border-[#E70E02] rounded-lg p-3 my-2">
-                    <img src="Images/banana.jpg" alt="Banana" class="w-full h-40 md:h-52 rounded-lg pop-out">
+                    class="group flex-none w-[calc(50%-0.25rem)] md:w-60 shadow-md border-[3px] border-transparent hover:border-[#E70E02] rounded-lg p-3 my-2">
+                    <div class="w-full h-40 md:h-52 bg-yellow-200 rounded-lg pop-out flex items-center justify-center">
+                        <img src="Images/banana.jpg" alt="Banana" class="w-full h-40 md:h-52 rounded-lg pop-out">
+                    </div>
                     <p class="text-center mt-2 font-medium">Fresh Banana</p>
                     <p class="my-2 text-gray-500 text-xs">Dozen</p>
-                    <div class="flex justify-between">
-                        <span>Rs 250</span>
+                    <div class="flex justify-between items-center">
+                        <span class="font-semibold">Rs 250</span>
                         <a href="#"><img src="Images/add-to-cart.png" class="w-6 md:w-8"></a>
                     </div>
                 </div>
 
                 <div
-                    class="group flex-none w-1/2 md:w-60 shadow-md border-[3px] border-transparent hover:border-[#E70E02] rounded-lg p-3 my-2">
-                    <img src="Images/apple.png" alt="Apple" class="w-full h-40 md:h-52 rounded-lg pop-out">
+                    class="group flex-none w-[calc(50%-0.25rem)] md:w-60 shadow-md border-[3px] border-transparent hover:border-[#E70E02] rounded-lg p-3 my-2">
+                    <div class="w-full h-40 md:h-52 bg-red-200 rounded-lg pop-out flex items-center justify-center">
+                        <img src="Images/apple.png" alt="Apple" class="w-full h-40 md:h-52 rounded-lg pop-out">
+                    </div>
                     <p class="text-center mt-2 font-medium">Fresh Apple</p>
                     <p class="my-2 text-gray-500 text-xs">Per Kg</p>
-                    <div class="flex justify-between">
-                        <span>Rs 300</span>
+                    <div class="flex justify-between items-center">
+                        <span class="font-semibold">Rs 300</span>
                         <a href="#"><img src="Images/add-to-cart.png" class="w-6 md:w-8"></a>
                     </div>
                 </div>
 
                 <div
-                    class="group flex-none w-1/2 md:w-60 shadow-md border-[3px] border-transparent hover:border-[#E70E02] rounded-lg p-3 my-2">
-                    <img src="Images/grapes.png" alt="Grapes" class="w-full h-40 md:h-52 rounded-lg pop-out">
+                    class="group flex-none w-[calc(50%-0.25rem)] md:w-60 shadow-md border-[3px] border-transparent hover:border-[#E70E02] rounded-lg p-3 my-2">
+                    <div class="w-full h-40 md:h-52 bg-purple-200 rounded-lg pop-out flex items-center justify-center">
+                        <img src="Images/grapes.png" alt="Grapes" class="w-full h-40 md:h-52 rounded-lg pop-out">
+                    </div>
                     <p class="text-center mt-2 font-medium">Fresh Grapes</p>
                     <p class="my-2 text-gray-500 text-xs">Per Kg</p>
-                    <div class="flex justify-between">
-                        <span>Rs 350</span>
+                    <div class="flex justify-between items-center">
+                        <span class="font-semibold">Rs 350</span>
                         <a href="#"><img src="Images/add-to-cart.png" class="w-6 md:w-8"></a>
                     </div>
                 </div>
             </div>
-
 
         </div>
 

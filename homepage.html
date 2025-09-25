@@ -152,11 +152,101 @@
                     class="w-full p-2 rounded-full bg-[#EEEEEE] h-12  px-3">
                 
             </div> -->
+            <header class="bg-white shadow-md w-full fixed top-0 left-0 z-50">
+
+
+                <div class="flex justify-between items-center px-4 py-2">
+
+                    <!-- Logo + Deliver -->
+                    <div class="flex items-center space-x-3">
+                        <img src="Images/removed bg logo.png" alt="Logo" class="h-12 w-auto object-contain pop-out">
+                        <!-- delivery dropdown -->
+                        <div class="relative group z-50">
+                            <button
+                                class="flex items-center space-x-1 px-3 py-2 rounded-lg border border-gray-300 bg-gray-50 hover:bg-blue-100 transition-all duration-200 ">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24" width="20"
+                                    height="20">
+                                    <path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 
+             9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 
+             2.5 2.5S13.38 11.5 12 11.5z" />
+                                </svg>
+                                <span class="font-medium">Deliver to</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
+                                    class="w-4 h-4" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+
+
+                        </div>
+
+                    </div>
+
+                    <!-- Cart + Profile -->
+                    <div class="flex items-center space-x-3">
+                        <a href="cart.html">
+                            <img src="Images/cart image.webp" alt="Cart" class="w-10 h-10 rounded-full">
+                        </a>
+                        <a href="">
+                            <img src="Images/Profile icon.jpg" alt="Profile" class="w-10 h-10 rounded-full">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Bottom Row: Categories + Search +welcome -->
+                <div class="flex  items-center px-4 py-2 space-x-3 md:justify-between">
+
+
+
+
+                    <div class="h-10 flex items-center px-4 bg-[#dc3545] relative group inline-block  z-50">
+                        <span class="mr-2">&#9776;</span>
+                        <span class="hidden md:inline">Categories</span>
+                        <span class="ml-2 hidden md:inline">&#9660;</span>
+                        <div
+                            class="absolute left-0  hidden group-hover:block bg-white top-full w-[150px] shadow-lg z-50">
+                            <a href="" class="block mx-5 p-2 hover:bg-[#dc3545] rounded-lg my-5">Ultra Fresh</a>
+                            <a href="" class="block mx-5 p-2 hover:bg-[#dc3545] rounded-lg my-5">Grocery</a>
+                            <a href="" class="block mx-5 p-2 hover:bg-[#dc3545] rounded-lg my-5">Breakfast</a>
+                            <a href="" class="block mx-5 p-2 hover:bg-[#dc3545] rounded-lg my-5">Frozen food</a>
+                            <a href="" class="block mx-5 p-2 hover:bg-[#dc3545] rounded-lg my-5">Baby Products</a>
+                        </div>
+                    </div>
+
+                    <!-- Search Bar -->
+                    <!-- <div class=" md:w-1/2">
+                <input type="text" placeholder="Looking for Something? Start Here"
+                    class="w-full p-2 rounded-full bg-[#EEEEEE] h-12  px-3">
+                
+            </div> -->
+
+                    <div class="md:w-1/2 flex items-center space-x-2">
+                        <!-- Search Input -->
+                        <input type="text" placeholder="Looking for Something? Start Here"
+                            class="w-full p-2 rounded-full bg-[#EEEEEE] h-12 px-3">
+
+                        <!-- All Products Button -->
+                        <button
+                            class="px-4 mx-2 h-12 rounded-lg bg-[#dc3545] text-white font-medium md:whitespace-nowrap ">
+                            <span>All Products</span>
+                        </button>
+                    </div>
+
+
+                    <!--  Welcome -->
+                    <div class="hidden md:inline-flex items-center mx-5 ">
+
+                        <p class="ml-0  ">Welcome to Elegant Mart</p>
+                    </div>
+                </div>
+
+            </header>
+
 
             <div class="md:w-1/2 flex items-center space-x-2">
                 <!-- Search Input -->
-<input type="text" placeholder="Looking for Something? Start Here"
-    class="w-full p-2 rounded-full h-12 px-3 border border-[#ffffff]
+                <input type="text" placeholder="Looking for Something? Start Here" class="w-full p-2 rounded-full h-12 px-3 border border-[#ffffff]
            focus:border-[#dc3545] focus:border-2 focus:border-solid 
            outline-none bg-[#EEEEEE]">
 
