@@ -79,6 +79,14 @@
             transform: scale(1.05);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
+        .hover-red-border {
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+.hover-red-border:hover {
+  border-color: #dc3545;
+}
+
     </style>
 
 
@@ -104,19 +112,24 @@
 
         <div class="flex justify-between items-center px-4 py-2">
 
-            <!-- Logo + Deliver -->
-            <div class="flex items-center space-x-3">
-                <img src="Images/Elegant-Mart-01.png" alt="Logo" class="h-14 w-44 object-contain pop-out">
+<!-- Profile Button (Top Right Logo) -->
+
+  <img src="Images/removed bg logo.png" 
+       alt="Profile Logo" 
+       class="h-12 w-auto object-contain pop-out rounded-lg 
+              border-2 border-transparent hover:border-[#dc3545] 
+              transition-all duration-300 cursor-pointer">
 
 
-            </div>
 
             <!-- Cart + Profile -->
             <div class="flex items-center space-x-3">
                 <a href="cart.html">
                     <img src="Images/cart image.webp" alt="Cart" class="w-10 h-10 rounded-full">
                 </a>
-                <a href="">
+
+
+                <a href="login.html">
                     <img src="Images/Profile icon.jpg" alt="Profile" class="w-10 h-10 rounded-full">
                 </a>
             </div>
@@ -169,8 +182,8 @@
 
 
     <!-- SLIDESHOW -->
-    <div class="overflow-hidden my-10 relative md:mx-10 pt-32 ">
-        <div class=" slideshow w-full rounded-lg">
+    <div class="overflow-hidden relative md:mx-10 pt-32 my-10">
+        <div class=" slideshow w-full   rounded-lg">
             <img src="Images/slideShow pic 1.jpg" alt="Banner 1" class="rounded-lg transition-transform duration-300  ">
             <img src="Images/slide show pic 2.png" alt="Banner 2" class="rounded-lg transition-transform duration-300 ">
             <img src="Images/slide show img 3.jpg" alt="Banner 3" class="rounded-lg transition-transform duration-300 ">
