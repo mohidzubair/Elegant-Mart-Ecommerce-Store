@@ -79,14 +79,15 @@
             transform: scale(1.05);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
-        .hover-red-border {
-  border: 2px solid transparent;
-  transition: all 0.3s ease;
-}
-.hover-red-border:hover {
-  border-color: #dc3545;
-}
 
+        .hover-red-border {
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .hover-red-border:hover {
+            border-color: #dc3545;
+        }
     </style>
 
 
@@ -112,11 +113,9 @@
 
         <div class="flex justify-between items-center px-4 py-2">
 
-<!-- Profile Button (Top Right Logo) -->
+            <!-- Profile Button (Top Right Logo) -->
 
-<img src="Images/martlogo.jpg" 
-     alt="Profile Logo" 
-     class="h-14 w-auto object-contain pop-out rounded-lg 
+            <img src="Images/martlogo.jpg" alt="Profile Logo" class="h-14 w-auto object-contain pop-out rounded-lg 
             border-2 border-transparent hover:border-[#dc3545] 
             transition-all duration-300 cursor-pointer hover-red-border">
 
@@ -142,9 +141,9 @@
 
             <!-- Categories -->
             <div class="h-10 flex items-center px-4 bg-[#dc3545] relative group inline-block  z-50">
-                <span class="mr-2">&#9776;</span>
-                <span class="hidden md:inline">Categories</span>
-                <span class="ml-2 hidden md:inline">&#9660;</span>
+                <span class="mr-2 text-white">&#9776;</span>
+                <span class="hidden md:inline text-white">Categories</span>
+                <span class="ml-2 hidden md:inline text-white">&#9660;</span>
                 <!-- Dropdown -->
                 <div class="absolute left-0  hidden group-hover:block bg-white top-full w-[150px] shadow-lg z-50">
                     <a href="" class="block mx-5 p-2 hover:bg-[#dc3545] rounded-lg my-5">Ultra Fresh</a>
